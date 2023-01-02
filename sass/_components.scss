@@ -1,0 +1,28 @@
+// User card
+.user-card {
+  width: 38.4rem;
+  height: 20.9rem;
+  padding: 3.7rem 5.1rem 2.3rem 3.2rem;
+  background-color: $grey-100;
+  border-radius: 1rem;
+
+  &__name {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 112%;
+    letter-spacing: -1px;
+    color: $grey-500;
+    @include flex(row, space-between, center);
+  }
+
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $grey-400;
+    margin-top: 2.1rem;
+  }
+}

@@ -1,0 +1,333 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #33303e; }
+
+html {
+  font-size: 62.5%; }
+
+img {
+  display: block;
+  max-width: 100%; }
+
+html,
+body {
+  overflow-x: hidden; }
+
+button {
+  background-color: transparent;
+  cursor: pointer; }
+
+a {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  line-height: 150%;
+  color: #f1f0f5; }
+
+.container {
+  width: 100%;
+  max-width: calc(126.4rem + 1.5rem);
+  margin: 0 auto;
+  padding: 0 1.5rem; }
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  line-height: 112%;
+  letter-spacing: -1px;
+  color: #33303e; }
+
+h1 {
+  font-size: 6.4rem;
+  font-weight: 600; }
+
+h2 {
+  font-weight: 700;
+  font-size: 4rem; }
+
+h3 {
+  font-weight: 500;
+  font-size: 2.4rem; }
+
+.p18,
+.p16,
+.p14 {
+  font-family: "Inter", sans-serif;
+  line-height: 150%;
+  color: #33303e; }
+
+.p18 {
+  font-size: 1.8rem; }
+
+.p16,
+.p14 {
+  font-weight: 400; }
+
+.p16 {
+  font-size: 1.6rem; }
+
+.p14 {
+  font-size: 1.4rem; }
+
+.user-card {
+  width: 38.4rem;
+  height: 20.9rem;
+  padding: 3.7rem 5.1rem 2.3rem 3.2rem;
+  background-color: #f1f0f5;
+  border-radius: 1rem; }
+  .user-card__name {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 112%;
+    letter-spacing: -1px;
+    color: #33303e;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  .user-card p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: #5f5c6b;
+    margin-top: 2.1rem; }
+
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 100%;
+  transition: background 0.3s;
+  padding: 1.6rem 2.7rem;
+  border-radius: 50rem; }
+
+.btn-primary {
+  background-color: #ffc800;
+  color: #855b35; }
+  .btn-primary:hover {
+    background-color: #ffdc5c; }
+
+.btn-secondary {
+  border: 1px solid #0073ce;
+  color: #0073ce; }
+  .btn-secondary:hover {
+    background-color: #0073ce;
+    color: #f1f0f5; }
+
+.btn-tertiary {
+  border: 1px solid #f1f0f5;
+  color: #f1f0f5;
+  display: inline-block; }
+  .btn-tertiary:hover {
+    background-color: #f1f0f5;
+    color: #00d7d7; }
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.1rem;
+    padding-bottom: 1.6rem; }
+    header .container .menu {
+      max-width: 89.6rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5.9rem; }
+      header .container .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4.8rem; }
+        header .container .menu ul li a {
+          transition: color 0.3s; }
+        header .container .menu ul li a:hover {
+          color: #ffc800; }
+
+.s-hero {
+  width: 100%;
+  height: 78.6rem;
+  background: url("../img/bg-hero.svg") no-repeat;
+  background-size: 100%;
+  padding-top: 17.5rem; }
+  .s-hero .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start; }
+  .s-hero .text {
+    width: 100;
+    max-width: 68.4rem; }
+    .s-hero .text h3 {
+      color: #ffffff;
+      opacity: 0.8;
+      font-weight: 600;
+      margin-bottom: 3.2rem; }
+    .s-hero .text h1 {
+      color: #fff;
+      margin-bottom: 3.9rem; }
+    .s-hero .text button {
+      margin-bottom: 6.4rem; }
+    .s-hero .text ul {
+      width: 100%;
+      max-width: 62.1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .s-hero .text ul li {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1.2rem; }
+        .s-hero .text ul li .icon {
+          width: 4.8rem;
+          height: 4.8rem;
+          border-radius: 50%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(180deg, rgba(53, 202, 226, 0.4), rgba(53, 202, 226, 0)); }
+        .s-hero .text ul li span {
+          color: #fff; }
+  .s-hero .area-image {
+    width: 100%;
+    max-width: 70.6rem;
+    margin-right: -17.4rem; }
+    .s-hero .area-image h2 {
+      text-align: center;
+      margin-bottom: 6.7rem;
+      color: #ffffff;
+      opacity: 0.4;
+      font-weight: 600; }
+    .s-hero .area-image .image {
+      width: 100%;
+      height: 54.1rem;
+      position: relative; }
+      .s-hero .area-image .image img {
+        position: absolute; }
+      .s-hero .area-image .image .card-circle {
+        bottom: 0;
+        right: 0; }
+      .s-hero .area-image .image .card-back {
+        bottom: 1.4rem;
+        right: 4.3rem; }
+      .s-hero .area-image .image .card-front {
+        left: 5.1rem;
+        top: 5.2rem; }
+
+.s-card-neon {
+  margin-top: 12.9rem; }
+  .s-card-neon .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start; }
+  .s-card-neon .left {
+    width: 100%;
+    max-width: 27.7rem;
+    text-align: center;
+    position: relative; }
+    .s-card-neon .left img {
+      max-width: 37.7rem; }
+    .s-card-neon .left .mockup-container {
+      width: 100%;
+      max-width: 48.3rem; }
+      .s-card-neon .left .mockup-container .circle {
+        position: absolute;
+        top: 8.7rem;
+        left: -21.4rem;
+        z-index: -1; }
+      .s-card-neon .left .mockup-container .mockup {
+        margin-bottom: 12.9rem; }
+    .s-card-neon .left .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      .s-card-neon .left .text .app-icon {
+        margin-bottom: 3.1rem;
+        position: relative; }
+        .s-card-neon .left .text .app-icon::before {
+          content: "";
+          position: absolute;
+          width: 0.5rem;
+          height: 8.3rem;
+          background: url("../img/points.svg");
+          top: calc(-8.3rem + -2.1rem); }
+      .s-card-neon .left .text p {
+        margin-bottom: 2.6rem; }
+      .s-card-neon .left .text .apple {
+        margin-bottom: 1.3rem; }
+  .s-card-neon .right {
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start; }
+    .s-card-neon .right .top {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      gap: 4.9rem; }
+      .s-card-neon .right .top h2 {
+        width: 100%;
+        max-width: 48.8rem; }
+      .s-card-neon .right .top ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start; }
+        .s-card-neon .right .top ul li {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 4.3rem;
+          padding-top: 3.7rem;
+          padding-bottom: 2.9rem;
+          border-bottom: 1px solid rgba(225, 224, 231, 0.4); }
+          .s-card-neon .right .top ul li .info {
+            width: 100%;
+            max-width: 53.7rem; }
+      .s-card-neon .right .top a {
+        color: #0073ce;
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 112%;
+        letter-spacing: -0.5px;
+        transition: color 0.3s ease-out; }
+        .s-card-neon .right .top a:hover {
+          color: #ffc800; }

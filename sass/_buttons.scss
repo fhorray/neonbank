@@ -1,0 +1,42 @@
+// Buttons
+.btn-primary,
+.btn-secondary,
+.btn-tertiary {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 100%;
+  transition: background 0.3s;
+  padding: 1.6rem 2.7rem;
+  border-radius: 50rem;
+}
+
+.btn-primary {
+  background-color: $brand-yellow;
+  color: #855b35;
+
+  &:hover {
+    background-color: #ffdc5c;
+  }
+}
+
+.btn-secondary {
+  border: 1px solid $brand-blue;
+  color: $brand-blue;
+
+  &:hover {
+    background-color: $brand-blue;
+    color: $grey-100;
+  }
+}
+
+.btn-tertiary {
+  border: 1px solid $grey-100;
+  color: $grey-100;
+  display: inline-block;
+
+  &:hover {
+    background-color: $grey-100;
+    color: $brand-green-light;
+  }
+}

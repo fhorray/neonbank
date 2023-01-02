@@ -1,0 +1,30 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+
+  .container {
+    @include flex(row, space-between, center);
+    padding-top: 3.1rem;
+    padding-bottom: 1.6rem;
+    .menu {
+      max-width: 89.6rem;
+      @include flex(row, space-between, center);
+      gap: 5.9rem;
+
+      ul {
+        @include flex(row, space-between, center);
+        gap: 4.8rem;
+        li a {
+          transition: color 0.3s;
+        }
+        li a:hover {
+          color: $brand-yellow;
+        }
+      }
+    }
+  }
+}

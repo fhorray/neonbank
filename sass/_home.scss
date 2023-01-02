@@ -1,0 +1,198 @@
+.s-hero {
+  width: 100%;
+  height: 78.6rem;
+  background: url("../img/bg-hero.svg") no-repeat;
+  background-size: 100%;
+  padding-top: 17.5rem;
+  .container {
+    @include flex(row, space-between, start);
+  }
+  .text {
+    width: 100;
+    max-width: 68.4rem;
+    h3 {
+      color: #ffffff;
+      opacity: 0.8;
+      font-weight: 600;
+      margin-bottom: 3.2rem;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 3.9rem;
+    }
+
+    button {
+      margin-bottom: 6.4rem;
+    }
+
+    ul {
+      width: 100%;
+      max-width: 62.1rem;
+      @include flex(row, space-between, center);
+      li {
+        @include flex(row, space-between, center);
+        gap: 1.2rem;
+
+        .icon {
+          width: 4.8rem;
+          height: 4.8rem;
+          border-radius: 50%;
+          @include flex(row, center, center);
+          background: linear-gradient(
+            180deg,
+            rgba(#35cae2, 0.4),
+            rgba(53, 202, 226, 0)
+          );
+        }
+
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .area-image {
+    width: 100%;
+    max-width: 70.6rem;
+    margin-right: -17.4rem;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 6.7rem;
+      color: #ffffff;
+      opacity: 0.4;
+      font-weight: 600;
+    }
+
+    .image {
+      width: 100%;
+      height: 54.1rem;
+      position: relative;
+      img {
+        position: absolute;
+      }
+
+      .card-circle {
+        bottom: 0;
+        right: 0;
+      }
+
+      .card-back {
+        bottom: 1.4rem;
+        right: 4.3rem;
+      }
+      .card-front {
+        left: 5.1rem;
+        top: 5.2rem;
+      }
+    }
+  }
+}
+
+.s-card-neon {
+  margin-top: 12.9rem;
+
+  .container {
+    @include flex(row, space-between, start);
+  }
+
+  .left {
+    width: 100%;
+    max-width: 27.7rem;
+    text-align: center;
+    position: relative;
+
+    img {
+      max-width: 37.7rem;
+    }
+
+    .mockup-container {
+      width: 100%;
+      max-width: 48.3rem;
+
+      .circle {
+        position: absolute;
+        top: 8.7rem;
+        left: -21.4rem;
+        z-index: -1;
+      }
+
+      .mockup {
+        margin-bottom: 12.9rem;
+      }
+    }
+
+    .text {
+      @include flex(column, space-between, center);
+
+      .app-icon {
+        margin-bottom: 3.1rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0.5rem;
+          height: 8.3rem;
+          background: url("../img/points.svg");
+          top: calc(-8.3rem + -2.1rem);
+        }
+      }
+
+      p {
+        margin-bottom: 2.6rem;
+      }
+
+      .apple {
+        margin-bottom: 1.3rem;
+      }
+    }
+  }
+
+  .right {
+    width: 100%;
+    max-width: 80rem;
+    @include flex(column, space-between, start);
+
+    .top {
+      @include flex(column, space-between, start);
+      gap: 4.9rem;
+
+      h2 {
+        width: 100%;
+        max-width: 48.8rem;
+      }
+
+      ul {
+        @include flex(column, space-between, start);
+        li {
+          .info {
+            width: 100%;
+            max-width: 53.7rem;
+          }
+          width: 100%;
+          @include flex(row, space-between, center);
+          gap: 4.3rem;
+          padding-top: 3.7rem;
+          padding-bottom: 2.9rem;
+          border-bottom: 1px solid rgba(#e1e0e7, 0.4);
+        }
+      }
+
+      a {
+        color: $brand-blue;
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 112%;
+        letter-spacing: -0.5px;
+        transition: color 0.3s ease-out;
+        &:hover {
+          color: $brand-yellow;
+        }
+      }
+    }
+  }
+}
