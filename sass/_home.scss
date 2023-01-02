@@ -2,7 +2,7 @@
   width: 100%;
   height: 78.6rem;
   background: url("../img/bg-hero.svg") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   padding-top: 17.5rem;
   .container {
     @include flex(row, space-between, start);
@@ -90,10 +90,141 @@
     }
   }
 }
+@include responsive(1650px) {
+  .s-hero {
+    height: 65rem;
+    padding-top: 15rem;
+    .text {
+      max-width: 56.4rem;
+      h1 {
+        font-size: 5rem;
+      }
+    }
+
+    .area-image {
+      margin-right: 0;
+
+      h2 {
+        margin-bottom: -2.3rem;
+      }
+
+      .card-front {
+        left: 0.1rem;
+        top: 6.2rem;
+      }
+    }
+  }
+}
+@include responsive(1250px) {
+  .s-hero {
+    height: 65rem;
+    padding-top: 15rem;
+    .text {
+      max-width: 56.4rem;
+      h1 {
+        font-size: 5rem;
+      }
+    }
+
+    .area-image {
+      margin-right: -0.6rem;
+
+      h2 {
+        margin-bottom: -2.3rem;
+      }
+      .circle {
+        max-width: 55rem;
+      }
+
+      .card-front,
+      .card-back {
+        max-width: 40rem;
+      }
+
+      .card-front {
+        left: 0.1rem;
+        top: 6.2rem;
+      }
+    }
+  }
+}
+@include responsive(1000px) {
+  .s-hero {
+    width: 100%;
+    height: 108.1rem;
+    margin-bottom: 17.2rem;
+    .container {
+      @include flex(column, start, center);
+    }
+
+    .text {
+      max-width: 68.5rem;
+      text-align: center;
+      margin-bottom: 5rem;
+      ul {
+        max-width: 100%;
+      }
+    }
+
+    .area-image {
+      h2 {
+        margin-bottom: 2rem;
+      }
+      margin-right: 0rem;
+      width: 63rem;
+    }
+  }
+}
+@include responsive(600px) {
+  .s-hero {
+    height: 99.9rem;
+    .text {
+      ul {
+        padding: 0 2rem;
+        li {
+          span {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    .area-image {
+      width: 100%;
+      @include flex(column, center, center);
+
+      h2 {
+        margin-bottom: 5rem;
+      }
+
+      .image {
+        max-width: 61.7rem;
+        height: 44.8rem;
+
+        .card-circle {
+          max-width: 36.7rem;
+          right: 50%;
+          transform: translateX(50%);
+          top: 0;
+          z-index: 2;
+        }
+        .card-back {
+          max-width: 30rem;
+          z-index: 1;
+          bottom: 6rem;
+          right: 7rem;
+        }
+        .card-front {
+          max-width: 30rem;
+          z-index: 3;
+        }
+      }
+    }
+  }
+}
 
 .s-card-neon {
   margin-top: 12.9rem;
-
   .container {
     @include flex(row, space-between, start);
   }
@@ -198,10 +329,13 @@
 
     .down {
       width: 100%;
+      height: 40rem;
       max-width: 88.6rem;
       position: relative;
       margin-top: 10.5rem;
-
+      background: url("../img/bg-box-card-neon.svg");
+      border-radius: 2rem;
+      background-size: cover;
       .down-info {
         position: absolute;
         top: 6.7rem;
@@ -254,6 +388,114 @@
       }
     }
   }
+}
+
+@include responsive(1115px) {
+  .s-card-neon {
+    .container {
+      gap: 5rem;
+    }
+
+    .right {
+      .down {
+        .down-info {
+          .image {
+            right: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive(1000px) {
+  .s-card-neon {
+    .right {
+      .down {
+        img {
+          height: 100%;
+        }
+        .down-info {
+          width: 100%;
+          @include flex(column, space-between, center);
+          top: 3.5rem;
+          transform: translateX(-50%);
+          left: 50%;
+          text-align: center;
+
+          .text {
+            h2 {
+              font-size: 3.5rem;
+            }
+            h3 {
+              font-size: 2.5rem;
+            }
+            p {
+              font-size: 2rem;
+            }
+          }
+
+          .image {
+            right: 0;
+            top: -6.5rem;
+            box-shadow: 0 1rem 5rem rgba(#000, 0.2);
+            margin-bottom: 20rem;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive(768px) {
+  .s-card-neon {
+    .container {
+      @include flex(column, center, center);
+      text-align: center;
+      gap: 30rem;
+    }
+    .left {
+      order: 2;
+
+      @include flex(row, space-between, center);
+      gap: 8.5rem;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 8rem;
+      .text {
+        .app-icon::before {
+          display: none;
+        }
+      }
+      .mockup-container {
+        .circle {
+          display: none;
+        }
+        .mockup {
+          margin: 0;
+        }
+      }
+    }
+    .right {
+      width: 100%;
+      max-width: 75rem;
+      order: 1;
+      .top {
+        width: 100%;
+        align-items: center;
+
+        ul {
+          text-align: start;
+        }
+
+        h2 {
+          max-width: 43rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+@include responsive(375px) {
 }
 
 .s-depoimentos {
@@ -449,10 +691,11 @@ footer {
             line-height: 17px;
             color: #ffffff;
             opacity: 0.7;
-            transition: color 0.3s;
+            transition: all 0.3s;
             padding: 0.5rem 0;
             &:hover {
               color: $brand-yellow;
+              opacity: 1;
             }
           }
         }

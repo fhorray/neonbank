@@ -10,11 +10,14 @@ header {
     @include flex(row, space-between, center);
     padding-top: 3.1rem;
     padding-bottom: 1.6rem;
+
     .menu {
       max-width: 89.6rem;
       @include flex(row, space-between, center);
       gap: 5.9rem;
-
+      .mobile-btn {
+        display: none;
+      }
       ul {
         @include flex(row, space-between, center);
         gap: 4.8rem;
@@ -24,6 +27,42 @@ header {
         }
         li a:hover {
           color: $brand-yellow;
+        }
+      }
+    }
+  }
+
+  @include responsive(1100px) {
+    .container {
+      .menu {
+        .mobile-btn {
+          display: none;
+        }
+        gap: 1.9rem;
+        ul {
+          gap: 1.8rem;
+        }
+      }
+    }
+  }
+  @include responsive(1000px) {
+    .container {
+      .menu {
+        .mobile-btn {
+          display: block;
+        }
+        gap: 4rem;
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+  @include responsive(600px) {
+    .container {
+      .menu {
+        button {
+          display: none;
         }
       }
     }
