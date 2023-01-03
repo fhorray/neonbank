@@ -339,7 +339,7 @@
       background: url("../img/bg-box-card-neon.svg");
       border-radius: 2rem;
       background-size: cover;
-      .down-info {
+      &-info {
         position: absolute;
         top: 6.7rem;
         left: 5.9rem;
@@ -351,20 +351,20 @@
           max-width: 38rem;
           padding-bottom: 5.9rem;
 
-          h2 {
+          h2,
+          h3 {
             font-weight: 600;
+            margin-bottom: 1.1rem;
+            color: #ffffff;
+          }
+          h2 {
             line-height: 6rem;
             letter-spacing: -0.2rem;
-            color: #ffffff;
-            margin-bottom: 1.1rem;
           }
 
           h3 {
-            font-weight: 600;
-            font-size: 2.8rem;
             line-height: 120%;
             letter-spacing: -1px;
-            color: #ffffff;
             margin-bottom: 1.1rem;
           }
 
@@ -452,6 +452,23 @@
   @include responsive(1150px) {
     .right {
       max-width: 70rem;
+      .down {
+        &-info {
+          .text {
+            h3 {
+              font-size: 1.8rem;
+            }
+            p {
+              margin-top: 2rem;
+              margin-bottom: 2rem;
+            }
+          }
+          .image {
+            width: 100%;
+            max-width: 31rem;
+          }
+        }
+      }
     }
   }
   @include responsive(678px) {
@@ -527,12 +544,14 @@
   }
 
   .depoimentos-slide {
-    // overflow: hidden;
+    padding: 0 2.5rem;
+    padding-bottom: 5rem;
 
     .swiper-pagination-bullet {
       background: rgba(#ffc800, 1);
       border-radius: 12px;
       transition: all 0.5s ease-out;
+      margin-bottom: -1rem;
       &-active {
         background: #ffc800;
         border-radius: 12px;
@@ -541,7 +560,10 @@
     }
   }
 
-  @include responsive(1230px) {
+  @include responsive(1250px) {
+    .container {
+      padding: 0;
+    }
     .top {
       h2 {
         margin: 0 auto;
@@ -635,6 +657,89 @@
     .mockup2 {
       top: 0;
       right: 23.3rem;
+    }
+  }
+
+  @include responsive(1150px) {
+    .container {
+      @include flex(column, space-between, center);
+    }
+    .info {
+      text-align: center;
+      @include flex(column, space-between, center);
+      ul {
+        @include flex(column, space-between, center);
+        li {
+          @include flex(column, space-between, center);
+        }
+      }
+    }
+    .area-image {
+      width: 100%;
+      height: 59.8rem;
+      max-width: 60.2rem;
+      margin-right: 0px;
+      margin-top: 17.5rem;
+      .circle {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+      .mockup1 {
+        bottom: 7.7rem;
+        left: 5.2rem;
+      }
+      .mockup2 {
+        top: -5.5rem;
+        right: 5.1rem;
+      }
+    }
+  }
+  @include responsive(650px) {
+    .area-image {
+      max-width: 65.2rem;
+      .circle {
+        max-width: 50rem;
+      }
+      .mockup1 {
+        max-width: 25rem;
+      }
+      .mockup2 {
+        max-width: 25rem;
+      }
+    }
+  }
+  @include responsive(550px) {
+    .area-image {
+      max-width: 65.2rem;
+      .circle {
+        max-width: 50rem;
+      }
+      .mockup1 {
+        max-width: 25rem;
+        left: 1rem;
+      }
+      .mockup2 {
+        max-width: 25rem;
+        right: 1rem;
+      }
+    }
+  }
+
+  @include responsive(450px) {
+    .area-image {
+      max-width: 65.2rem;
+      .circle {
+        max-width: 50rem;
+      }
+      .mockup1 {
+        max-width: 20rem;
+        left: 0rem;
+      }
+      .mockup2 {
+        max-width: 20rem;
+        right: 0rem;
+      }
     }
   }
 }

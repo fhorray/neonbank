@@ -87,8 +87,9 @@ h3 {
   font-size: 1.4rem; }
 
 .user-card {
-  width: 38.4rem;
-  height: 20.9rem;
+  width: 100%;
+  max-width: 38.4rem;
+  height: 22.5rem;
   padding: 3.7rem 5.1rem 2.3rem 3.2rem;
   background-color: #f1f0f5;
   border-radius: 1rem; }
@@ -458,7 +459,7 @@ header {
       background: url("../img/bg-box-card-neon.svg");
       border-radius: 2rem;
       background-size: cover; }
-      .s-card-neon .right .down .down-info {
+      .s-card-neon .right .down-info {
         position: absolute;
         top: 6.7rem;
         left: 5.9rem;
@@ -467,24 +468,23 @@ header {
         justify-content: space-between;
         align-items: center;
         gap: 2.9rem; }
-        .s-card-neon .right .down .down-info .text {
+        .s-card-neon .right .down-info .text {
           width: 100%;
           max-width: 38rem;
           padding-bottom: 5.9rem; }
-          .s-card-neon .right .down .down-info .text h2 {
+          .s-card-neon .right .down-info .text h2,
+          .s-card-neon .right .down-info .text h3 {
             font-weight: 600;
+            margin-bottom: 1.1rem;
+            color: #ffffff; }
+          .s-card-neon .right .down-info .text h2 {
             line-height: 6rem;
-            letter-spacing: -0.2rem;
-            color: #ffffff;
-            margin-bottom: 1.1rem; }
-          .s-card-neon .right .down .down-info .text h3 {
-            font-weight: 600;
-            font-size: 2.8rem;
+            letter-spacing: -0.2rem; }
+          .s-card-neon .right .down-info .text h3 {
             line-height: 120%;
             letter-spacing: -1px;
-            color: #ffffff;
             margin-bottom: 1.1rem; }
-          .s-card-neon .right .down .down-info .text p {
+          .s-card-neon .right .down-info .text p {
             width: 100%;
             max-width: 32.7rem;
             font-weight: 400;
@@ -492,9 +492,9 @@ header {
             line-height: 140%;
             color: #ffffff;
             margin-bottom: 1.1rem; }
-          .s-card-neon .right .down .down-info .text button {
+          .s-card-neon .right .down-info .text button {
             padding: 1.6rem 4rem; }
-        .s-card-neon .right .down .down-info .image {
+        .s-card-neon .right .down-info .image {
           position: relative;
           right: -2.5rem;
           top: -2.5rem; }
@@ -542,7 +542,15 @@ header {
         display: none; } }
   @media (max-width: 1150px) {
     .s-card-neon .right {
-      max-width: 70rem; } }
+      max-width: 70rem; }
+      .s-card-neon .right .down-info .text h3 {
+        font-size: 1.8rem; }
+      .s-card-neon .right .down-info .text p {
+        margin-top: 2rem;
+        margin-bottom: 2rem; }
+      .s-card-neon .right .down-info .image {
+        width: 100%;
+        max-width: 31rem; } }
   @media (max-width: 678px) {
     .s-card-neon .right .down {
       height: 55rem;
@@ -599,15 +607,21 @@ header {
       color: #c6c5ce;
       opacity: 0.8;
       margin-bottom: 1.4rem; }
-  .s-depoimentos .depoimentos-slide .swiper-pagination-bullet {
-    background: #ffc800;
-    border-radius: 12px;
-    transition: all 0.5s ease-out; }
-    .s-depoimentos .depoimentos-slide .swiper-pagination-bullet-active {
+  .s-depoimentos .depoimentos-slide {
+    padding: 0 2.5rem;
+    padding-bottom: 5rem; }
+    .s-depoimentos .depoimentos-slide .swiper-pagination-bullet {
       background: #ffc800;
       border-radius: 12px;
-      width: 1.7rem; }
-  @media (max-width: 1230px) {
+      transition: all 0.5s ease-out;
+      margin-bottom: -1rem; }
+      .s-depoimentos .depoimentos-slide .swiper-pagination-bullet-active {
+        background: #ffc800;
+        border-radius: 12px;
+        width: 1.7rem; }
+  @media (max-width: 1250px) {
+    .s-depoimentos .container {
+      padding: 0; }
     .s-depoimentos .top h2 {
       margin: 0 auto;
       text-align: center; } }
@@ -688,6 +702,75 @@ header {
     .s-digital-acc .area-image .mockup2 {
       top: 0;
       right: 23.3rem; }
+  @media (max-width: 1150px) {
+    .s-digital-acc .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+    .s-digital-acc .info {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      .s-digital-acc .info ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center; }
+        .s-digital-acc .info ul li {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center; }
+    .s-digital-acc .area-image {
+      width: 100%;
+      height: 59.8rem;
+      max-width: 60.2rem;
+      margin-right: 0px;
+      margin-top: 17.5rem; }
+      .s-digital-acc .area-image .circle {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1; }
+      .s-digital-acc .area-image .mockup1 {
+        bottom: 7.7rem;
+        left: 5.2rem; }
+      .s-digital-acc .area-image .mockup2 {
+        top: -5.5rem;
+        right: 5.1rem; } }
+  @media (max-width: 650px) {
+    .s-digital-acc .area-image {
+      max-width: 65.2rem; }
+      .s-digital-acc .area-image .circle {
+        max-width: 50rem; }
+      .s-digital-acc .area-image .mockup1 {
+        max-width: 25rem; }
+      .s-digital-acc .area-image .mockup2 {
+        max-width: 25rem; } }
+  @media (max-width: 550px) {
+    .s-digital-acc .area-image {
+      max-width: 65.2rem; }
+      .s-digital-acc .area-image .circle {
+        max-width: 50rem; }
+      .s-digital-acc .area-image .mockup1 {
+        max-width: 25rem;
+        left: 1rem; }
+      .s-digital-acc .area-image .mockup2 {
+        max-width: 25rem;
+        right: 1rem; } }
+  @media (max-width: 450px) {
+    .s-digital-acc .area-image {
+      max-width: 65.2rem; }
+      .s-digital-acc .area-image .circle {
+        max-width: 50rem; }
+      .s-digital-acc .area-image .mockup1 {
+        max-width: 20rem;
+        left: 0rem; }
+      .s-digital-acc .area-image .mockup2 {
+        max-width: 20rem;
+        right: 0rem; } }
 
 footer {
   background-color: #0073ce; }
