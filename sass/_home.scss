@@ -105,6 +105,7 @@
       }
     }
   }
+
   @include responsive(1366px) {
     .area-image {
       margin-right: -3rem;
@@ -118,7 +119,7 @@
   }
   @include responsive(1280px) {
     .area-image {
-      margin-right: -7rem;
+      margin-right: 0rem;
 
       .image {
         .card-front {
@@ -158,8 +159,6 @@
     }
   }
   @include responsive(768px) {
-    .container {
-    }
     .text {
       h1 {
         font-size: 5rem;
@@ -228,6 +227,7 @@
 
 .s-card-neon {
   margin-top: 12.9rem;
+
   .container {
     @include flex(row, space-between, start);
   }
@@ -335,7 +335,7 @@
       height: 40rem;
       max-width: 88.6rem;
       position: relative;
-      margin-top: 10.5rem;
+      margin-top: 6.5rem;
       background: url("../img/bg-box-card-neon.svg");
       border-radius: 2rem;
       background-size: cover;
@@ -391,6 +391,117 @@
       }
     }
   }
+  @include responsive(1230px) {
+    .container {
+      @include flex(column, space-between, center);
+    }
+    .right {
+      align-items: center;
+      .top {
+        max-width: 68.4rem;
+        h2 {
+          max-width: 50rem;
+          text-align: center;
+          max-width: 50rem;
+          left: 50%;
+          transform: translateX(-50%);
+          position: relative;
+        }
+
+        a {
+          left: 50%;
+          transform: translateX(-50%);
+          position: relative;
+        }
+      }
+
+      .down {
+        margin-top: 5.5rem;
+        .down-info {
+          .text {
+            padding-bottom: 0;
+          }
+          .image {
+            top: 0.5rem;
+          }
+        }
+      }
+    }
+    .left {
+      order: 2;
+      @include flex(row, space-between, center);
+      max-width: 70rem;
+      gap: 18rem;
+      margin-top: 9.3rem;
+      .mockup-container {
+        .circle {
+          display: none;
+        }
+        .mockup {
+          margin-bottom: 0;
+        }
+      }
+
+      .text {
+        .app-icon::before {
+          display: none;
+        }
+      }
+    }
+  }
+  @include responsive(1150px) {
+    .right {
+      max-width: 70rem;
+    }
+  }
+  @include responsive(678px) {
+    .right {
+      .down {
+        height: 55rem;
+        margin-bottom: 10rem;
+        .down-info {
+          text-align: center;
+          @include flex(column, space-between, center);
+          width: 100%;
+          position: absolute;
+          top: 6.7rem;
+          left: 0rem;
+
+          .text {
+            p {
+              max-width: 100%;
+            }
+          }
+
+          .image {
+            right: 0;
+            filter: drop-shadow(0 3rem 5rem rgba($brand-blue, 0.5));
+          }
+        }
+      }
+    }
+
+    .left {
+      @include flex(column, space-between, center);
+      gap: 4rem;
+      .mockup-container {
+        width: 100%;
+        max-width: 48.3rem;
+        order: 2;
+
+        .mockup {
+          margin: 0 auto;
+        }
+      }
+
+      .text {
+        order: 1;
+        p {
+          max-width: 40rem;
+        }
+      }
+    }
+  }
 }
 
 .s-depoimentos {
@@ -399,7 +510,7 @@
   padding-bottom: 4rem;
   .top {
     width: 100%;
-    height: 10rem;
+
     margin-bottom: 4rem;
     @include flex(row, space-between, center);
 
@@ -426,6 +537,15 @@
         background: #ffc800;
         border-radius: 12px;
         width: 1.7rem;
+      }
+    }
+  }
+
+  @include responsive(1230px) {
+    .top {
+      h2 {
+        margin: 0 auto;
+        text-align: center;
       }
     }
   }
