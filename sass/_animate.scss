@@ -1,0 +1,27 @@
+@keyframes floatingFront {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatingBack {
+  0% {
+    transform: translate(0);
+  }
+
+  30% {
+    transform: translate(10px, 30px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}

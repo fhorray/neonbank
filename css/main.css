@@ -46,6 +46,22 @@ a {
   margin: 0 auto;
   padding: 0 1.5rem; }
 
+@keyframes floatingFront {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-30px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes floatingBack {
+  0% {
+    transform: translate(0); }
+  30% {
+    transform: translate(10px, 30px); }
+  100% {
+    transform: translate(0); } }
+
 h1,
 h2,
 h3 {
@@ -268,12 +284,14 @@ header {
       .s-hero .area-image .image .card-back {
         bottom: 1.4rem;
         right: 4.3rem;
-        max-width: 35.2rem; }
+        max-width: 35.2rem;
+        animation: floatingBack 10s infinite ease-in-out; }
       .s-hero .area-image .image .card-front {
         left: 5.1rem;
         top: 5.2rem;
         max-width: 43.5rem;
-        filter: drop-shadow(5rem 5rem 8rem rgba(0, 0, 0, 0.2)); }
+        filter: drop-shadow(5rem 5rem 8rem rgba(0, 0, 0, 0.2));
+        animation: floatingFront 10s infinite ease-out; }
   @media (max-width: 1440px) {
     .s-hero {
       height: 78.6rem; }
